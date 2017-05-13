@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: b266a2150a62de6419411f93b91082f9
+timeCreated: 1465959177
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ball
+    100002: Ceiling
+    100004: Couch1
+    100006: Couch2
+    100008: Door
+    100010: Fireplace
+    100012: fireplace_group
+    100014: Firewood
+    100016: flat_TV_group
+    100018: Floor
+    100020: Lamp
+    100022: //RootNode
+    100024: Light
+    100026: Painting_G
+    100028: painting_group
+    100030: Painting_O
+    100032: Painting_R
+    100034: pCube5.001
+    100036: pCylinder12
+    100038: Plate
+    100040: Plate.001
+    100042: play_pen_2_group
+    100044: PlayPen
+    100046: PlayPen_Door
+    100048: PotPlant
+    100050: Table
+    100052: toys_group
+    100054: TV_Modern
+    100056: TV_Old
+    100058: TV_Table
+    100060: Vase1
+    100062: Vase2
+    100064: Walls
+    400000: Ball
+    400002: Ceiling
+    400004: Couch1
+    400006: Couch2
+    400008: Door
+    400010: Fireplace
+    400012: fireplace_group
+    400014: Firewood
+    400016: flat_TV_group
+    400018: Floor
+    400020: Lamp
+    400022: //RootNode
+    400024: Light
+    400026: Painting_G
+    400028: painting_group
+    400030: Painting_O
+    400032: Painting_R
+    400034: pCube5.001
+    400036: pCylinder12
+    400038: Plate
+    400040: Plate.001
+    400042: play_pen_2_group
+    400044: PlayPen
+    400046: PlayPen_Door
+    400048: PotPlant
+    400050: Table
+    400052: toys_group
+    400054: TV_Modern
+    400056: TV_Old
+    400058: TV_Table
+    400060: Vase1
+    400062: Vase2
+    400064: Walls
+    2300000: Ball
+    2300002: Ceiling
+    2300004: Couch1
+    2300006: Couch2
+    2300008: Door
+    2300010: Fireplace
+    2300012: Firewood
+    2300014: Floor
+    2300016: Lamp
+    2300018: Light
+    2300020: Painting_G
+    2300022: Painting_O
+    2300024: Painting_R
+    2300026: pCube5.001
+    2300028: pCylinder12
+    2300030: Plate
+    2300032: PlayPen
+    2300034: PlayPen_Door
+    2300036: PotPlant
+    2300038: Table
+    2300040: TV_Modern
+    2300042: TV_Old
+    2300044: TV_Table
+    2300046: Vase1
+    2300048: Vase2
+    2300050: Walls
+    3300000: Ball
+    3300002: Ceiling
+    3300004: Couch1
+    3300006: Couch2
+    3300008: Door
+    3300010: Fireplace
+    3300012: Firewood
+    3300014: Floor
+    3300016: Lamp
+    3300018: Light
+    3300020: Painting_G
+    3300022: Painting_O
+    3300024: Painting_R
+    3300026: pCube5.001
+    3300028: pCylinder12
+    3300030: Plate
+    3300032: PlayPen
+    3300034: PlayPen_Door
+    3300036: PotPlant
+    3300038: Table
+    3300040: TV_Modern
+    3300042: TV_Old
+    3300044: TV_Table
+    3300046: Vase1
+    3300048: Vase2
+    3300050: Walls
+    4300000: TV_Table
+    4300002: TV_Old
+    4300004: Lamp
+    4300006: Table
+    4300008: Light
+    4300010: Couch2
+    4300012: Couch1
+    4300014: Vase1
+    4300016: Plate
+    4300018: Vase2
+    4300020: Firewood
+    4300022: PotPlant
+    4300024: Ball
+    4300026: PlayPen_Door
+    4300028: PlayPen
+    4300030: Painting_G
+    4300032: Painting_R
+    4300034: Painting_O
+    4300036: Fireplace
+    4300038: Door
+    4300040: Ceiling
+    4300042: Floor
+    4300044: Walls
+    4300046: pCylinder12
+    4300048: TV_Modern
+    4300050: pCube5.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
