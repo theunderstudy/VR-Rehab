@@ -58,9 +58,12 @@ public class FrontFacingCamera : MonoBehaviour
             m_frameHeader = new CameraVideoStreamFrameHeader_t();
             m_frameHeaderSize = (uint)Marshal.SizeOf(m_frameHeader);
 
+            Debug.Log(bitsPerPixel);
+            bitsPerPixel = 10;
+
             if (bitsPerPixel == 3)
                 m_texture = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
-            else if (bitsPerPixel == 4)
+            else //if (bitsPerPixel == 4)
                 m_texture = new Texture2D((int)width, (int)height, TextureFormat.RGBA32, false);
             // if there's some other texture format here, we simply won't be able to do anything in Update()
 
