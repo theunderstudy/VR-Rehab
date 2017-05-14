@@ -18,7 +18,7 @@ public class Mirror : MonoBehaviour {
         if(MirrorToHand == true)
         {
             this.enabled = true; 
-            transform.position = new Vector3(MirrorFromHand.position.x - Player.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(MirrorFromHand.position.x - Player.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z);
 
         }
 	}
