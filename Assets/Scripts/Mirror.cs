@@ -18,8 +18,8 @@ public class Mirror : MonoBehaviour {
         if(MirrorToHand == true)
         {
             this.enabled = true; 
-            transform.position = new Vector3(MirrorFromHand.position.x - Player.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z);
-
+            transform.position = new Vector3(MirrorFromHand.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z - Player.position.z);
+            transform.rotation = new Quaternion(MirrorFromHand.rotation.x, MirrorFromHand.rotation.y, MirrorFromHand.rotation.z, MirrorFromHand.rotation.w);
         }
 	}
 }
