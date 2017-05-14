@@ -9,7 +9,7 @@ public class AugmentedMove : MonoBehaviour {
     public Transform AugmentTarget; 
 
 
-    private Vector3 BasePosition;
+    private Vector3 PrevPosition;
     private bool BaseSet = false;
 
 
@@ -20,28 +20,25 @@ public class AugmentedMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!BaseSet)
-        {
 
-            CaptureBase(AugmentTarget.transform);
-        }
-        else
+        if (BaseSet)
         {
-            Debug.Log("AugTick");
-            Vector3 Diff = AugmentTarget.transform.position - BasePosition;
+            Vector3 Diff = AugmentTarget.transform.position - PrevPosition;
 
             if (Diff.magnitude != 0)
             {
 
-                Vector3 AugmentedDiff = Diff;// + Diff * AugmentIncrement;
+                Vector3 AugmentedDiff = Diff + Diff * AugmentIncrement;
                 transform.position = transform.position + AugmentedDiff;
             }
         }
-	}
+
+        CaptureBase(AugmentTarget.transform);
+    }
 
     void CaptureBase(Transform ObjectBase)
     {
         BaseSet = true;
-        BasePosition = ObjectBase.transform.position;
+        PrevPosition = ObjectBase.transform.position;
     }
 }
