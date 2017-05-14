@@ -20,20 +20,28 @@ public class AugmentedMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        Vector3 Diff = transform.position - BasePosition;
-
-        if(Diff.magnitude != 0)
+        if (!BaseSet)
         {
 
-            Vector3 AugmentedDiff = Diff + Diff * AugmentIncrement;
-            transform.position = transform.position + AugmentedDiff;
+            CaptureBase(AugmentTarget.transform);
+        }
+        else
+        {
+            Debug.Log("AugTick");
+            Vector3 Diff = AugmentTarget.transform.position - BasePosition;
+
+            if (Diff.magnitude != 0)
+            {
+
+                Vector3 AugmentedDiff = Diff;// + Diff * AugmentIncrement;
+                transform.position = transform.position + AugmentedDiff;
+            }
         }
 	}
 
-    void CaptureBase()
+    void CaptureBase(Transform ObjectBase)
     {
         BaseSet = true;
-        BasePosition = transform.position;
+        BasePosition = ObjectBase.transform.position;
     }
 }
