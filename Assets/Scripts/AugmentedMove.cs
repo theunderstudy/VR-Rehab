@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EHand
+{
+    Right,
+    Left
+}
+
 public class AugmentedMove : MonoBehaviour {
 
     //Amount of extra movement to add per tick, will add up very quickly
-    public float AugmentIncrement = 0.01f;
-    public Transform AugmentTarget; 
+    public float AugmentIncrement = 0.25f;
+    public EHand Hand = EHand.Right; 
+
+    private Transform AugmentTarget; 
 
 
     private Vector3 PrevPosition;
@@ -15,6 +23,15 @@ public class AugmentedMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if(Hand == EHand.Right)
+        {
+            AugmentTarget = GameObject.Find("Controller (left)").transform;
+        }
+        else
+        {
+            AugmentTarget = GameObject.Find("Controller (right)").transform;
+        }
+
         transform.position = AugmentTarget.position;
 	}
 	
@@ -30,6 +47,7 @@ public class AugmentedMove : MonoBehaviour {
 
                 Vector3 AugmentedDiff = Diff + Diff * AugmentIncrement;
                 transform.position = transform.position + AugmentedDiff;
+                transform.rotation = AugmentTarget.transform.rotation;
             }
         }
 

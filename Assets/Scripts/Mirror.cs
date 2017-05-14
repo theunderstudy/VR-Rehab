@@ -2,24 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mirror : MonoBehaviour {
+public class Mirror : MonoBehaviour
+{
+    public EHand Hand = EHand.Right;
 
-    public bool MirrorToHand = false;
-    public Transform MirrorFromHand;
-    public Transform Player;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-        if(MirrorToHand == true)
+    private Transform MirrorFromHand;
+    private Transform Player;
+
+    // Use this for initialization
+    void Start()
+    {
+        if (Hand == EHand.Right)
         {
-            this.enabled = true; 
-            transform.position = new Vector3(MirrorFromHand.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z - Player.position.z);
-            transform.rotation = new Quaternion(MirrorFromHand.rotation.x, MirrorFromHand.rotation.y, MirrorFromHand.rotation.z, MirrorFromHand.rotation.w);
+            MirrorFromHand = GameObject.Find("Controller (left)").transform;
         }
-	}
+        else
+        {
+            MirrorFromHand = GameObject.Find("Controller (right)").transform;
+        }
+
+        Player = GameObject.Find("Camera (eye)").transform;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        this.enabled = true;
+        transform.position = new Vector3(MirrorFromHand.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z - Player.position.z);
+        transform.rotation = new Quaternion(MirrorFromHand.rotation.x, MirrorFromHand.rotation.y, MirrorFromHand.rotation.z, MirrorFromHand.rotation.w);
+    }
 }

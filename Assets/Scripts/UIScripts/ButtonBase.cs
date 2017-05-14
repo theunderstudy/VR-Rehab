@@ -9,6 +9,9 @@ public class ButtonBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 {
     [SerializeField]
     protected string Function;
+
+    public GameObject LeftHand, RightHand, LeftHandMirror, RightHandMirror, LeftHandAugment, RightHandAugment;
+
     public Color Selected;
     private void Start()
     {
@@ -59,26 +62,27 @@ public class ButtonBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     private void MirrorLeftHand()
     {
-
+        LeftHandMirror.SetActive(!LeftHandMirror.activeSelf);
     }
 
     private void MirrorRightHand()
     {
-
+        RightHandMirror.SetActive(!RightHandMirror.activeSelf);
     }
 
     private void AugmentLeftHand()
     {
-
+        LeftHandAugment.SetActive(!LeftHandAugment.activeSelf);
     }
 
     private void AugmentRightHand()
     {
-
+        RightHandAugment.SetActive(!RightHandAugment.activeSelf);
     }
 
     private void AugmentBothHands()
     {
-
+        LeftHandAugment.SetActive(!LeftHandAugment.activeSelf);
+        RightHandAugment.SetActive(!RightHandAugment.activeSelf);
     }
 }
