@@ -23,7 +23,7 @@ public class SceneTransition : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-           StartCoroutine(LoadLevel("MainScene"));
+           StartCoroutine(LoadLevel("RoomScene"));
         }
     }
 
