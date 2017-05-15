@@ -29,7 +29,7 @@ public class SceneTransition : MonoBehaviour {
 
     public IEnumerator LoadLevel(string Level)
     {
-
+        GameManager.instance.Options.SetActive(false);
         AsyncOperation loader;
         loader = SceneManager.LoadSceneAsync(Level);
         loader.allowSceneActivation = false;
@@ -46,11 +46,11 @@ public class SceneTransition : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
         }
-
+        yield return new WaitForSeconds(1.0f);
         while (FaderImage.color.a >0.01f)
         {
             Color fade = FaderImage.color;
-            fade.a -= 0.01f;
+            fade.a -= 0.005f;
             FaderImage.color = fade;
             yield return new WaitForEndOfFrame();
         }

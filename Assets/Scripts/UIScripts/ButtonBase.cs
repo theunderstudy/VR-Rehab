@@ -11,7 +11,8 @@ public class ButtonBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     protected string Function;
 
     public GameObject LeftHand, RightHand, LeftHandMirror, RightHandMirror, LeftHandAugment, RightHandAugment;
-
+    public GameObject LeftHandModle;
+    public GameObject RighthandModle;
     public Color Selected;
     private void Start()
     {
@@ -85,4 +86,18 @@ public class ButtonBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         LeftHandAugment.SetActive(!LeftHandAugment.activeSelf);
         RightHandAugment.SetActive(!RightHandAugment.activeSelf);
     }
+    private void toggleHands()
+    {
+        if (LeftHandModle.activeInHierarchy)
+        {
+            LeftHandModle.SetActive(false);
+            RighthandModle.SetActive(false);
+        }
+        else
+        {
+            LeftHandModle.SetActive(true);
+            RighthandModle.SetActive(true);
+        }
+    }
+
 }

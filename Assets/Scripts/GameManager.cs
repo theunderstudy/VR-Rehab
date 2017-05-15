@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public float AugmentAmount = 2;
     public Slider AugmentSlider;
     public Text SliderText;
+    public GameObject Options;
     // Use this for initialization
     void Awake()
     {
@@ -44,6 +45,16 @@ public class GameManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-       
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (Options.activeInHierarchy)
+            {
+                Options.SetActive(false);
+            }
+            else
+            {
+                Options.SetActive(true);
+            }
+        }
 	}
 }
