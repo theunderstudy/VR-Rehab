@@ -1,0 +1,17 @@
+Begin Object Class=BlendSpace1D Name="RightGrip_BS"
+   Begin Object Class=SceneThumbnailInfo Name="SceneThumbnailInfo_0"
+   End Object
+   Begin Object Name="SceneThumbnailInfo_0"
+   End Object
+   SampleData(0)=(Animation=AnimSequence'/Game/VirtualReality/Mannequin/Animations/MannequinHand_Right_Open.MannequinHand_Right_Open')
+   SampleData(1)=(Animation=AnimSequence'/Game/VirtualReality/Mannequin/Animations/MannequinHand_Right_Grab.MannequinHand_Right_Grab',SampleValue=(X=1.000000,Y=0.000000,Z=0.000000))
+   SampleData(2)=(Animation=AnimSequence'/Game/VirtualReality/Mannequin/Animations/MannequinHand_Right_CanGrab.MannequinHand_Right_CanGrab',SampleValue=(X=0.500000,Y=0.000000,Z=0.000000))
+   GridSamples(0)=(Indices[0]=2,Indices[1]=0,Weights[1]=1.000000)
+   GridSamples(1)=(Indices[0]=2,Indices[1]=0,Weights[0]=0.500000,Weights[1]=0.500000)
+   GridSamples(2)=(Indices[0]=2,Indices[1]=0,Weights[0]=1.000000)
+   GridSamples(3)=(Indices[0]=1,Indices[1]=2,Weights[0]=0.500000,Weights[1]=0.500000)
+   GridSamples(4)=(Indices[0]=1,Indices[1]=2,Weights[0]=1.000000)
+   BlendParameters(0)=(DisplayName="Grip",Max=1.000000)
+   Skeleton=Skeleton'/Game/VirtualReality/Mannequin/Character/Mesh/MannequinHand_Right_Skeleton.MannequinHand_Right_Skeleton'
+   ThumbnailInfo=SceneThumbnailInfo'SceneThumbnailInfo_0'
+End Object
