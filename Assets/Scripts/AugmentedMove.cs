@@ -32,11 +32,15 @@ public class AugmentedMove : MonoBehaviour {
             AugmentTarget = GameObject.Find("Controller (right)").transform;
         }
 
+        PlayerPrefs.SetFloat("AugmentSlider", AugmentIncrement);
+
         transform.position = AugmentTarget.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        PlayerPrefs.GetFloat("AugmentSlider");
 
         if (BaseSet)
         {
