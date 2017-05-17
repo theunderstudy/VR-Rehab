@@ -29,9 +29,9 @@ public class Mirror : MonoBehaviour
     void Update()
     {
 
+        float XMirrored = (Player.position.x - MirrorFromHand.position.x) * 2;
 
-        this.enabled = true;
-        transform.position = new Vector3(MirrorFromHand.position.x, MirrorFromHand.position.y, MirrorFromHand.position.z - Player.position.z);
+        transform.position = new Vector3(XMirrored, MirrorFromHand.position.y, MirrorFromHand.position.z);
         transform.rotation = new Quaternion(MirrorFromHand.rotation.x, MirrorFromHand.rotation.y, MirrorFromHand.rotation.z, MirrorFromHand.rotation.w);
     }
 }
