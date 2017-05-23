@@ -5,6 +5,7 @@ using UnityEngine;
 public class GripHand : MonoBehaviour {
 
     public Rigidbody attachPoint;
+    public Transform Hand;
     SteamVR_TrackedObject trackedObj;
     FixedJoint joint;
 
@@ -21,9 +22,9 @@ public class GripHand : MonoBehaviour {
         if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
         {
             RaycastHit hit;
-            Physics.SphereCast(transform.position, 1, new Vector3(0, 0, 0), out hit);
+            Physics.SphereCast(Hand.position, 1, new Vector3(0, 0, 0), out hit);
 
-            if (hit.rigidbody)
+            if (hit.rigidbody && hit.rigidbody.tag == "Interactable")
             {
                 GameObject GrabObject = hit.rigidbody.GetComponent<GameObject>();
                 GrabObject.transform.position = attachPoint.transform.position;

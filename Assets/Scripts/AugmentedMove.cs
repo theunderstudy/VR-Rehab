@@ -17,6 +17,7 @@ public class AugmentedMove : MonoBehaviour {
     public Transform AugmentTarget; 
 
     private Vector3 PrevPosition;
+    private Quaternion PrevRot;
     private bool BaseSet = false;
 
 
@@ -44,7 +45,16 @@ public class AugmentedMove : MonoBehaviour {
 
                     Vector3 AugmentedDiff = Diff + Diff * AugmentIncrement;
                     transform.position = transform.position + AugmentedDiff;
-                    transform.rotation = AugmentTarget.transform.rotation;
+
+                    //Rotation Augment PROTOTYPE
+                    float xRot = PrevRot.x - AugmentTarget.transform.rotation.x;
+                    xRot = xRot + xRot * AugmentIncrement;
+                    float yRot = PrevRot.y - AugmentTarget.transform.rotation.y;
+                    yRot = yRot + yRot * AugmentIncrement;
+                    float zRot = PrevRot.z - AugmentTarget.transform.rotation.z;
+                    zRot = zRot + zRot * AugmentIncrement;
+
+                    transform.rotation = new Quaternion(xRot,yRot,zRot, AugmentTarget.transform.rotation.w);
                 }
             }
 
@@ -56,5 +66,6 @@ public class AugmentedMove : MonoBehaviour {
     {
         BaseSet = true;
         PrevPosition = ObjectBase.transform.position;
+        PrevRot = ObjectBase.transform.rotation;
     }
 }
